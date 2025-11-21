@@ -1,0 +1,12 @@
+fastapi
+uvicorn[standard]
+pydantic
+sqlalchemy
+alembic
+python-jose[cryptography]    # cho JWT
+passlib[bcrypt]
+python-dotenv
+databases                    # optional, nếu muốn async DB helper
+aiofiles                     # để upload file
+python-multipart             # form data (upload)
+psycopg2-binary              # nếu dùng Postgres
