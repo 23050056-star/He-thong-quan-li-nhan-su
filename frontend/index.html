@@ -118,20 +118,40 @@
           <div class="table-container">
             <table id="employeesTable">
               <thead>
-                <tr>
-                  <th>Mã NV</th>
-                  <th>Họ tên</th>
-                  <th>Email</th>
-                  <th>Phòng ban</th>
-                  <th>Chức vụ</th>
-                  <th>Ngày vào làm</th>
-                  <th>Trạng thái</th>
-                  <th>Thao tác</th>
-                </tr>
-              </thead>
-              <tbody id="employeesTableBody">
-                <!-- Employees data will be loaded here -->
-              </tbody>
+  <tr>
+    <th>Mã NV</th>
+    <th>Họ tên</th>
+    <th>Email</th>
+    <th>Phòng ban</th>
+    <th>Chức vụ</th>
+    <th>Ngày vào làm</th>
+    <th>Ngày chấm công</th>
+    <th>Ngày nghỉ</th>
+    <th>Trạng thái</th>
+    <th>Thao tác</th>
+  </tr>
+</thead>
+<tbody id="employeesTableBody">
+  <!-- Render nhân viên -->
+  <tr>
+    <td>NV001</td>
+    <td>Nguyễn Văn A</td>
+    <td>nva@company.com</td>
+    <td>IT</td>
+    <td>Developer</td>
+    <td>15/1/2023</td>
+    <td>15/1/2023</td> <!-- Ngày chấm công -->
+    <td></td> <!-- Ngày nghỉ -->
+    <td><span class="status-active">Đang làm việc</span></td>
+    <td>
+      <div class="btn-actions">
+        <button class="btn-edit">Sửa</button>
+        <button class="btn-delete">Xóa</button>
+      </div>
+    </td>
+  </tr>
+</tbody>
+
             </table>
           </div>
         </section>
@@ -231,6 +251,17 @@
             <label for="employeeStartDate">Ngày vào làm:</label>
             <input type="date" id="employeeStartDate" required />
           </div>
+
+          <!-- Thêm phần ngày chấm công và ngày nghỉ -->
+          <div class="form-group">
+            <label for="employeeAttendance">Ngày chấm công:</label>
+            <input type="date" id="employeeAttendance" />
+          </div>
+          <div class="form-group">
+            <label for="employeeLeave">Ngày nghỉ:</label>
+            <input type="date" id="employeeLeave" />
+          </div>
+
           <div class="form-group">
             <label for="employeeStatus">Trạng thái:</label>
             <select id="employeeStatus" required>
