@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng nhập hệ thống</title>
+    <link rel="stylesheet" href="/static/account/style.css">
+</head>
+<body class="light">
+
+<div class="login-card">
+    <div class="card-header">
+        <h1>Đăng nhập hệ thống</h1>
+    </div>
+    <form id="loginForm" class="card-body">
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input id="email" name="email" type="email" placeholder="example@domain.com" required>
+        </div>
+
+        <div class="form-group">
+            <label for="password">Mật khẩu:</label>
+            <input id="password" name="password" type="password" required>
+        </div>
+
+        <div class="form-group">
+            <label for="role">Vai trò:</label>
+            <select id="role" name="role" required>
+                <option value="" disabled selected>Chọn vai trò</option>
+                <option value="admin">Quản trị viên (Admin)</option>
+                <option value="user">Nhân viên (Staff)</option>
+            </select>
+        </div>
+
+        <div class="form-actions">
+            <button type="submit" class="btn-primary">Đăng nhập</button>
+        </div>
+        <div id="error" class="error"></div>
+    </form>
+</div>
+
+<script src="/static/account/login.js"></script>
+</body>
+</html>
