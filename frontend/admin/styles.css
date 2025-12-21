@@ -1,0 +1,294 @@
+/* =======================
+   Reset cơ bản
+======================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* =======================
+   Header
+======================= */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    background-color: #7C70D2;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    z-index: 1000;
+}
+
+.header h1 {
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.header h1 i {
+    margin-right: 8px;
+}
+
+.btn-logout {
+    background-color: #fff;
+    color: #7C70D2;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.btn-logout:hover {
+    background-color: #f0f0f0;
+}
+
+/* =======================
+   Sidebar
+======================= */
+.sidebar {
+    width: 220px;
+    background-color: #2c2c2c;
+    color: white;
+    padding-top: 80px; /* để tránh header */
+    flex-shrink: 0;
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar button {
+    width: 100%;
+    background: none;
+    border: none;
+    color: white;
+    padding: 12px 20px;
+    text-align: left;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background 0.3s;
+}
+
+.sidebar button:hover {
+    background-color: #444;
+}
+
+/* =======================
+   Main content
+======================= */
+.main-content {
+    flex-grow: 1;
+    padding: 80px 20px 20px 20px; /* tránh header */
+    overflow-x: auto;
+}
+
+.content-section {
+    display: none;
+}
+
+.content-section.active {
+    display: block;
+}
+
+/* =======================
+   Section Header
+======================= */
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.section-header h2 {
+    font-size: 18px;
+    color: #333;
+}
+
+.btn-primary {
+    background-color: #7C70D2;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.btn-primary i {
+    margin-right: 4px;
+}
+
+.btn-primary:hover {
+    background-color: #6458b8;
+}
+
+/* =======================
+   Table
+======================= */
+.table-container {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+table thead {
+    background-color: #7C70D2;
+    color: white;
+}
+
+table th, table td {
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    text-align: left;
+    font-size: 14px;
+}
+
+table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+table tbody button {
+    background-color: #7C70D2;
+    color: white;
+    border: none;
+    padding: 4px 8px;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-right: 4px;
+    font-size: 12px;
+}
+
+table tbody button:hover {
+    background-color: #6458b8;
+}
+
+/* =======================
+   Search / Filter
+======================= */
+.search-bar {
+    display: flex;
+    margin-bottom: 12px;
+    gap: 8px;
+}
+
+.search-bar input, .search-bar select {
+    padding: 6px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* =======================
+   Cards
+======================= */
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.card {
+    background-color: #fff;
+    padding: 12px;
+    border-radius: 6px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    width: calc(33.333% - 8px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card button {
+    background-color: #7C70D2;
+    color: white;
+    padding: 4px 8px;
+    border: none;
+    border-radius: 4px;
+    font-size: 12px;
+}
+
+.card button:hover {
+    background-color: #6458b8;
+}
+
+/* =======================
+   Salary summary
+======================= */
+.salary-summary {
+    display: flex;
+    margin-bottom: 16px;
+}
+
+.summary-card {
+    background-color: #fff;
+    padding: 16px;
+    border-radius: 6px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    width: 300px;
+}
+
+.salary-total {
+    font-weight: bold;
+    color: #7C70D2;
+}
+
+/* =======================
+   Reports
+======================= */
+.reports-container {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.report-card {
+    background-color: #fff;
+    padding: 12px;
+    border-radius: 6px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    flex: 1;
+    min-width: 300px;
+}
+
+/* =======================
+   Responsive
+======================= */
+@media screen and (max-width: 900px){
+    .container { flex-direction: column; }
+    .sidebar { width: 100%; padding-top: 60px; display:flex; overflow-x:auto;}
+    .sidebar button{ flex:1; white-space:nowrap; }
+    .main-content { padding: 100px 10px 20px 10px; }
+    .card { width: calc(50% - 6px); }
+}
+
+@media screen and (max-width: 600px){
+    .card { width: 100%; }
+    table th, table td { font-size: 12px; }
+}
