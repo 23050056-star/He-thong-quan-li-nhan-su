@@ -85,9 +85,9 @@ cd backend
 
 # Frontend
 cd frontend
+
 # mở file index.html hoặc chạy server frontend
 
 ## 8. Kết luận
 
 Hệ thống Quản lý Nhân sự là giải pháp hỗ trợ hiệu quả cho công tác quản lý nhân sự trong doanh nghiệp. Việc áp dụng hệ thống giúp nâng cao tính chuyên nghiệp, chính xác và tiết kiệm nguồn lực, phù hợp cho các doanh nghiệp vừa và nhỏ cũng như môi trường học tập, nghiên cứu.
-
