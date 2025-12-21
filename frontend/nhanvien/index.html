@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nhân viên - Chấm công</title>
+     <link rel="stylesheet" href="/static/employee.css">
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <h1><i class="fas fa-user"></i> Nhân viên - Chấm công</h1>
+        <button onclick="logout()" class="btn-logout">Đăng xuất</button>
+      </header>
+
+      <section class="info">
+        <p>
+          <strong>Họ và tên:</strong>
+          <span id="employeeName">Nguyễn Văn A</span>
+        </p>
+        <p>
+          <strong>Chức vụ:</strong> <span id="employeePosition">Nhân viên</span>
+        </p>
+      </section>
+
+      <section class="attendance">
+        <h3>Chấm công hôm nay</h3>
+
+        <div class="buttons">
+          <button class="btn-primary" onclick="markPresent()">
+            <i class="fas fa-check"></i> Đi làm
+          </button>
+          <button class="btn-danger" onclick="showLeaveForm()">
+            <i class="fas fa-calendar-times"></i> Nghỉ
+          </button>
+        </div>
+
+        <p id="todayStatus">Trạng thái: Chưa chấm công</p>
+      </section>
+
+      <section id="leaveForm" class="leave-form hidden">
+        <h4>Lý do nghỉ</h4>
+        <textarea id="leaveReason" placeholder="Nhập lý do nghỉ..."></textarea>
+        <button class="btn-primary" onclick="submitLeave()">Gửi</button>
+      </section>
+
+      <section class="history">
+        <h3>Lịch chấm công tháng này</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Ngày</th>
+              <th>Trạng thái</th>
+              <th>Lý do (nếu nghỉ)</th>
+            </tr>
+          </thead>
+          <tbody id="attendanceTable">
+            <!-- JS render -->
+          </tbody>
+        </table>
+      </section>
+    </div>
+
+   <script src="/static/employee.js"></script> 
+  </body>
+</html>
