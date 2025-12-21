@@ -81,12 +81,13 @@ git clone <repository-url>
 
 # Backend
 cd backend
-# cài đặt thư viện và chạy server
+
+# Cài đặt thư viện và chạy server
 
 # Frontend
 cd frontend
 
-# mở file index.html hoặc chạy server frontend
+# Mở file index.html hoặc chạy server frontend
 
 ## 8. Kết luận
 
